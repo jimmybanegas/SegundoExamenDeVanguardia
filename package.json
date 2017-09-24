@@ -1,0 +1,58 @@
+{
+  "name": "segundoexamendevanguardia",
+  "version": "1.0.0",
+  "description": "Kata 04 using a Clean Code guide for Js",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jasmine": "^2.8.0",
+    "jasmine-co": "^1.2.2",
+    "nyc": "^11.2.1"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**"
+    ],
+    "exclude": [
+      "spec/**",
+      "node_modules/**"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "scripts": {
+    "lint": "eslint src spec index.js --ext .js",
+    "jasmine": "jasmine",
+    "lint-test": "npm run lint && npm run jasmine",
+    "test": "nyc npm run lint-test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmybanegas93/SegundoExamenDeVanguardia.git"
+  },
+  "author": "Jimmy Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmybanegas93/SegundoExamenDeVanguardia/issues"
+  },
+  "homepage": "https://github.com/jimmybanegas93/SegundoExamenDeVanguardia#readme"
+}
