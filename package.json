@@ -1,0 +1,19 @@
+{
+  "name": "segundoexamendevanguardia",
+  "version": "1.0.0",
+  "description": "Kata O4 Using clean code guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmybanegas93/SegundoExamenDeVanguardia.git"
+  },
+  "author": "Jimmy Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmybanegas93/SegundoExamenDeVanguardia/issues"
+  },
+  "homepage": "https://github.com/jimmybanegas93/SegundoExamenDeVanguardia#readme"
+}
