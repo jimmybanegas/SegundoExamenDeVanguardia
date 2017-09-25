@@ -1,5 +1,5 @@
 const Reader = require('./reader')
-const reader = new Reader();
+let reader = new Reader();
 
 module.exports = class WeatherReader {  
   static parseData() {    
