@@ -4,7 +4,7 @@ module.exports = class WeatherReader {
   // constructor() {}
 
   static loadData() {
-    return fs.readFileSync('./resources/weather.dat', 'utf8')
+    return fs.readFileSync('./weather.dat', 'utf8')
       .trim();
   }
 
