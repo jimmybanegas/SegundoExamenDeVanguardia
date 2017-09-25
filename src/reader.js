@@ -5,4 +5,3 @@ module.exports = class Reader {
     return FS.readFileSync(filename, 'utf8').trim();
   }
 };
-
