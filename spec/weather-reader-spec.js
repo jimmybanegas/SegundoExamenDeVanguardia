@@ -5,7 +5,7 @@ describe('WeatherReader class ', () => {
   describe('when parsed data is correct', () => {
     let data;
     beforeEach(() => {
-      data = weather.parseData();
+      data = weather.parseWeatherData();
     });
     it('matches objects with the expect key/value pairs', () => {
       expect(data[0]).toEqual({
@@ -19,7 +19,7 @@ describe('WeatherReader class ', () => {
   describe('finds the day with minimum spread', () => {
     let data;
     beforeEach(() => {
-      data = weather.getDesiredDay();
+      data = weather.dayWithSmallestSpread;
     });
     it('matches objects with the expect key/value pairs', () => {
       expect(data).toEqual({

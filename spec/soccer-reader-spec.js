@@ -5,7 +5,7 @@ describe('SoccerReader class ', () => {
   describe('when parsed data is correct', () => {
     let data;
     beforeEach(() => {
-      data = soccerReader.parseData();
+      data = soccerReader.parseSoccerData();
     });
     it('matches objects with the expect key/value pairs', () => {
       expect(data[0]).toEqual({
@@ -19,7 +19,7 @@ describe('SoccerReader class ', () => {
   describe('finds the closest team', () => {
     let data;
     beforeEach(() => {
-      data = soccerReader.getClosestTeam();
+      data = soccerReader.teamWithSmallestDifference;
     });
     it('matches objects with the expect key/value pairs', () => {
       expect(data).toEqual({
