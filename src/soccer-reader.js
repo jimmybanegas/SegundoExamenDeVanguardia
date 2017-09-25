@@ -1,13 +1,9 @@
-const fs = require('fs');
+const Reader = require('./reader')
+let reader = new Reader();
 
 module.exports = class WeatherReader {
-  static loadDataFromFile() {
-    return fs.readFileSync('./resources/football.dat', 'utf8')
-      .trim();
-  }
-
   static get data() {
-    const data = this.loadDataFromFile().split('\n')
+    const data = reader.readFile('./resources/football.dat').split('\n')
       .slice(1).slice(0, -1)
       .filter(line => !line.startsWith('-'));
     return data.slice(0, 18).concat(data.slice(19));

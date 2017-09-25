@@ -1,17 +1,13 @@
-const fs = require('fs');
+const Reader = require('./reader')
+let reader = new Reader();
 
-module.exports = class WeatherReader {
-  static loadDataFromFile() {
-    return fs.readFileSync('./resources/weather.dat', 'utf8')
-      .trim();
-  }
-
-  static parseData() {
-    if (!this.loadDataFromFile()) {
+module.exports = class WeatherReader {  
+  static parseData() {    
+    if (!reader.readFile('./resources/weather.dat')) {
       throw new Error('Data not found');
     }
 
-    return this.loadDataFromFile().split('\n').slice(2).slice(0, -1)
+    return reader.readFile('./resources/weather.dat').split('\n').slice(2).slice(0, -1)
       .map(line => line.trim().split(/\s+/))
       .map(line => ({
         day: Number(line[0]),
