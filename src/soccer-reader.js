@@ -1,5 +1,4 @@
-const Reader = require('./reader');
-
+const Reader = require('./reader')
 const reader = new Reader();
 
 module.exports = class WeatherReader {
