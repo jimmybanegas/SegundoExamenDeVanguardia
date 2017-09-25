@@ -1,11 +1,11 @@
-const soccer = require('../src/soccer-reader');
+const soccerReader = require('../src/soccer-reader');
 require('jasmine-co').install();
 
 describe('SoccerReader class ', () => {
   describe('when parsed data is correct', () => {
     let data;
     beforeEach(() => {
-      data = soccer.parseData();
+      data = soccerReader.parseData();
     });
     it('matches objects with the expect key/value pairs', () => {
       expect(data[0]).toEqual({
@@ -19,7 +19,7 @@ describe('SoccerReader class ', () => {
   describe('finds the closest team', () => {
     let data;
     beforeEach(() => {
-      data = soccer.getClosestTeam();
+      data = soccerReader.getClosestTeam();
     });
     it('matches objects with the expect key/value pairs', () => {
       expect(data).toEqual({
