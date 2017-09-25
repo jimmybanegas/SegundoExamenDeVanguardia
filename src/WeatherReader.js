@@ -1,6 +1,8 @@
 const fs = require('fs');
 
 module.exports = class WeatherReader {
+  // constructor() {}
+
   static loadData() {
     return fs.readFileSync('./resources/weather.dat', 'utf8')
       .trim();
