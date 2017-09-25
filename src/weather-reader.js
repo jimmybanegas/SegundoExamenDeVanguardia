@@ -1,8 +1,9 @@
-const Reader = require('./reader')
+const Reader = require('./reader');
+
 const reader = new Reader();
 
-module.exports = class WeatherReader {  
-  static parseData() {    
+module.exports = class WeatherReader {
+  static parseData() {
     if (!reader.readFile('./resources/weather.dat')) {
       throw new Error('Data not found');
     }
