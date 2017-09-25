@@ -1,8 +1,5 @@
-const Reader = require('./src/WeatherReader');
+const WeatherReader = require('./src/weather-reader');
+const SoccerReader = require('./src/soccer-reader');
 
-// const FILENAME = 'weather.dat';
-
-
-// weather.readFile(FILENAME);
-
-console.log(Reader.desiredDay());
+console.log(WeatherReader.getDesiredDay());
+console.log(SoccerReader.getClosestTeam());
