@@ -4,10 +4,7 @@ const reader = new Reader();
 
 module.exports = class WeatherReader {
   static parseData() {
-    const data = reader.readFile('./resources/football.dat');
-    return data
-      .split('\n')
-      .slice(2).slice(0, -1)
+    return reader.readFile('./resources/weather.dat').split('\n').slice(2).slice(0, -1)
       .map(line => line.trim().split(/\s+/))
       .map(line => ({
         day: Number(line[0]),
@@ -22,4 +19,3 @@ module.exports = class WeatherReader {
                                        (day2.maximum - day2.minimum))[0];
   }
 };
-
