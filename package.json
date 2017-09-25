@@ -36,8 +36,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "request": "^2.81.0",
-    "request-promise": "^4.2.1",
-    "util.inherits": "^1.0.3"
+    "request-promise": "^4.2.1"
   },
   "scripts": {
     "lint": "eslint src spec index.js --ext .js",
